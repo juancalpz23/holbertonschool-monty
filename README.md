@@ -51,8 +51,66 @@ Run the interpreter with a Monty bytecode file:
 
 ## Examples
 
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/001.m
+3
+2
+1
+0
+6
+5
+4
+3
+2
+1
+0
+juancalpz23@penguin:~/holbertonschool-monty$
+```
 
-## Rescources
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/00.m
+3
+2
+1
+juancalpz23@penguin:~/holbertonschool-monty$
+```
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/06.m
+1
+2
+3
+juancalpz23@penguin:~/holbertonschool-monty$
+```
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/07.m
+3
+2
+1
+2
+1
+1
+juancalpz23@penguin:~/holbertonschool-monty$
+```
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/09.m
+3
+2
+1
+2
+3
+1
+juancalpz23@penguin:~/holbertonschool-monty$
+```
+```
+juancalpz23@penguin:~/holbertonschool-monty$ ./monty bytecodes/12.m
+3
+2
+1
+5
+1
+juancalpz23@penguin:~/holbertonschool-monty$
+```
+## Resources
 
 - *[Google](https://intranet.hbtn.io/rltoken/0BnGxP9OJGM4vvO8SuXRvQ)*
 - *[How to use exten to share variables between source files](https://intranet.hbtn.io/rltoken/LeTvCFCvcgkvd-6USy3yrA)*
