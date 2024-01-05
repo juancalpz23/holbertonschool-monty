@@ -19,6 +19,11 @@ void build_arr(char *token_array[], char *buffer)
 	}
 	while (token != NULL)
 	{
+		char *new_tkn = strchr(token, '$'); //check for '$'
+		if (new_tkn != NULL)
+		{
+			*new_tkn = '\0'; //replace '$' with null
+		}
 		token_array[j] = token;
 		token = strtok(NULL, " ");
 		j++;
