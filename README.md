@@ -12,14 +12,42 @@
 
 ## Description
 
+This project is an interpreter for Monty ByteCodes, developed in C. Monty is a stack-based scripting language used for instructing stack operations, similar to assembly language. The interpreter executes Monty bytecode files, allowing for various stack manipulations.
 
 ## Files
 
+- `monty.h`: Header file with structure definitions and function prototypes.
+- `monty.c`: Main program file.
+- `build_arr.c`: Functions for building the instruction array.
+- `find_fun.c`: Functions to identify and execute opcodes.
+- `free.c`: Memory management functions.
+- `op_func.c`, `other_op.c`, `push.c`: Implementation of various opcodes.
 
 ## Features
 
+- Interpretation of Monty bytecode files (`.m` extension).
+- Supports a variety of stack operations including `push`, `pall`, `pint`, `pop`, `swap`, `add`, `nop`, and others.
+- Efficient memory management to handle stack operations.
 
 ## Use
+
+### Installation
+
+Clone the repository:
+```shell
+
+```
+Compile the program using:
+```shell
+gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+```
+
+### Usage
+
+Run the interpreter with a Monty bytecode file:
+```shell
+./monty file.m
+```
 
 
 ## Examples
@@ -27,5 +55,10 @@
 
 ## Rescources
 
+- *[Google](https://intranet.hbtn.io/rltoken/0BnGxP9OJGM4vvO8SuXRvQ)*
+- *[How to use ](https://intranet.hbtn.io/rltoken/LeTvCFCvcgkvd-6USy3yrA)*
 
 ## Credits
+
+- *[Norman Colon](https://github.com/normancolon)*
+- *[Juan C Lopez Loyola](https://github.com/juancalpz23)*
