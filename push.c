@@ -1,43 +1,45 @@
-#include <monty.h>
-/**
- *
- *
- *
- **/
+#include "monty.h"
 
-void push(stack_t **stack, unsigned int line_num, char *n)
+/**
+ * push - insert node  head of list
+ * @stack: where to insert
+ * @line_number: line number error
+ * @n: argument for push
+ * Return: new head
+ */
+stack_t *push(stack_t **stack, unsigned int line_number, char *n)
 {
 	stack_t *new;
-	int num;
 	int isNumber;
+	int num;
 
 	isNumber = is_num(n);
 	if (isNumber == 1)
 	{
-		fprintf(stderr, "L%i: usage: push integer\n", line_num)
-			exit(EXIT_FAILURE);
+		fprintf(stderr, "L%i: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
 	}
 	num = atoi(n);
-	new = malloc(sizeof(tack_t));
+	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
 		fprintf(stderr, "can't allocate memory\n");
 		exit(EXIT_FAILURE);
 	}
-new->n = num;
-new->prev = NULL;
-new-> = *stack;
-if (*stack != NULL)
-	(*stack)->prev = new;
-*stack = new;
-return (*stack);
+	new->n = num;
+	new->prev = NULL;
+	new->next = *stack;
+	if (*stack != NULL)
+		(*stack)->prev = new;
+	*stack = new;
+	return (*stack);
 }
+
 /**
- *
- *
- *
- *
- **/
+ * is_num - checks if string contains a num
+ * @n: string to check
+ * Return: 0 if num, 1 if else
+ */
 int is_num(char *n)
 {
 	int i = 0;
