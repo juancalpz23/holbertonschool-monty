@@ -35,7 +35,7 @@ This project is an interpreter for Monty ByteCodes, developed in C. Monty is a s
 
 Clone the repository:
 ```shell
-
+https://github.com/juancalpz23/holbertonschool-monty.git
 ```
 Compile the program using:
 ```shell
@@ -49,14 +49,13 @@ Run the interpreter with a Monty bytecode file:
 ./monty file.m
 ```
 
-
 ## Examples
 
 
 ## Rescources
 
 - *[Google](https://intranet.hbtn.io/rltoken/0BnGxP9OJGM4vvO8SuXRvQ)*
-- *[How to use ](https://intranet.hbtn.io/rltoken/LeTvCFCvcgkvd-6USy3yrA)*
+- *[How to use exten to share variables between source files](https://intranet.hbtn.io/rltoken/LeTvCFCvcgkvd-6USy3yrA)*
 
 ## Credits
 
