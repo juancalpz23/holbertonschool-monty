@@ -37,3 +37,26 @@ size_t stack_len(const stack_t *h)
 	}
 	return (count);
 }
+/**
+ * div - divides the top elements
+ * @stack: refers to node
+ * @line_number: read from monty file
+ */
+void _div(stack_t **stack, unsigned line_number)
+{
+	int div = 0;
+
+	if (stack_len(*stack) < 2)
+	{
+		fprintf(stderr, "L%i: can't div, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack) == 0)
+	{
+		fprintf(stderr, "L%i: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	div = (*stack)->next->n / (*stack)->n;
+	(*stack)->next->n = div;
+	pop(stack, line_number);
+}
