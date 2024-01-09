@@ -20,7 +20,7 @@ void pall(stack_t **stack, unsigned int  __attribute__((unused)) line_number)
 }
 /**
  * pint - function that prints the head of our stack
- * @stack: parameter nodes refrecence 
+ * @stack: parameter nodes refrecence
  * @line_number: line number being read from the monty file
  */
 void pint(stack_t **stack, unsigned int line_number)
