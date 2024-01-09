@@ -11,7 +11,8 @@ void find_func(char *token_array[], int y, stack_t **node)
 	int i;
 	instruction_t arr[] = {{"pall", pall}, {"add", add}, {"push", NULL},
 	{"swap", swap}, {"pint", pint}, {"pop", pop},
-	{"nop", NULL}, {"sub", sub}, {"div", _div}, {"mul", _mul}, {"mod", _mod}, {NULL, NULL}};
+	{"nop", NULL}, {"sub", sub}, {"div", _div}, {"mul", _mul},
+	{"mod", _mod}, {NULL, NULL}};
 
 	for (i = 0; arr[i].opcode != NULL; i++)
 	{
