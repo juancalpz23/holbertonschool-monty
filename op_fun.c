@@ -61,7 +61,7 @@ void pop(stack_t **stack, unsigned int line_number)
  * add - adds the two top elements of the stack together and update
  * stacks with the new value and removes one of the elements
  * @stack: parameter refering to nodes
- * @line_number: lline number being read from monty file
+ * @line_number: line number being read from monty file
  */
 void add(stack_t **stack, unsigned int line_number)
 {
@@ -74,5 +74,23 @@ void add(stack_t **stack, unsigned int line_number)
 	}
 	sum = (*stack)->n + (*stack)->next->n;
 	(*stack)->next->n = sum;
+	pop(stack, line_number);
+}
+/**
+ * sub - substracts the tope element from the second top and updates the stack
+ * @stack: refers to nodes
+ * @line_number: line number resd from monty file
+ */
+void sub(stack_t **stack, unsigned int line_number)
+{
+	int sub = 0;
+
+	if (stack_len(*stack) < 2)
+	{
+		fprintf(stderr, "L%i: can't sub, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	sub = (*stack)->next->n - (*stack)->n;
+	(*stack)->next->n = sub;
 	pop(stack, line_number);
 }
